@@ -1,0 +1,6 @@
+rootProject.name = 'XyCloud'
+include 'XyCloud-model'
+include 'XyCloud-eureka-server'
+include 'XyCloud-config'
+include 'XyCloud-TestProducer'
+

@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'xyz.xy718'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
