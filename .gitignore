@@ -3,7 +3,7 @@
 /.classpath
 /.project
 /.vscode/
-.settings/org.eclipse.buildship.core.prefs
+.settings/
 .gitignore
 /.idea
 .gradle
