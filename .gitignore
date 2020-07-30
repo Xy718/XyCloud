@@ -16,6 +16,7 @@ XyCloud-TestProducer/bin/
 XyCloud-config/.classpath
 XyCloud-config/.project
 XyCloud-config/.settings/
+XyCloud-config/build/
 XyCloud-config/bin/
 
 XyCloud-eureka-server/.classpath
