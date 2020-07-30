@@ -1,23 +1,40 @@
 plugins {
+    id 'org.springframework.boot' version '2.3.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
 
 group 'xyz.xy718'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
+ext {
+    set('springCloudVersion', "Hoxton.SR6")
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 }
-subprojects{
-apply plugin: "java-library"
+allprojects{
+	apply plugin: "java-library"
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
 	dependencies{
 	    compileOnly 'org.projectlombok:lombok'
 	    annotationProcessor 'org.projectlombok:lombok'
 	    testCompile group: 'junit', name: 'junit', version: '4.12'
-		testCompile group: 'junit', name: 'junit', version: '4.12'
+	    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        	exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    	}
+	    
+	}
+	dependencyManagement {
+	    imports {
+	        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	    }
 	}
 }
