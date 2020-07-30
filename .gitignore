@@ -21,6 +21,7 @@ XyCloud-config/bin/
 XyCloud-eureka-server/.classpath
 XyCloud-eureka-server/.project
 XyCloud-eureka-server/.settings/
+XyCloud-eureka-server/build/
 XyCloud-eureka-server/bin/
 
 XyCloud-model/.classpath
