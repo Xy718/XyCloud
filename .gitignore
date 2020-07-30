@@ -2,36 +2,29 @@
 *.class
 /.classpath
 /.project
+*/.classpath
+*/.project
 /.vscode/
 .settings/
 .gitignore
 /.idea
 .gradle
+*.iml
 
-XyCloud-TestProducer/.classpath
-XyCloud-TestProducer/.project
 XyCloud-TestProducer/.settings/
 XyCloud-TestProducer/bin/
 
-XyCloud-config/.classpath
-XyCloud-config/.project
 XyCloud-config/.settings/
 XyCloud-config/build/
 XyCloud-config/bin/
 
-XyCloud-eureka-server/.classpath
-XyCloud-eureka-server/.project
 XyCloud-eureka-server/.settings/
 XyCloud-eureka-server/build/
 XyCloud-eureka-server/bin/
 
-XyCloud-model/.classpath
-XyCloud-model/.project
 XyCloud-model/.settings/
 XyCloud-model/bin/
 
-XyCloud-Gateway/.classpath
-XyCloud-Gateway/.project
 XyCloud-Gateway/.settings
 XyCloud-Gateway/gradle/
 XyCloud-Gateway/bin/
