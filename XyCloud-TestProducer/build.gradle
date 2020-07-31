@@ -1,17 +1,33 @@
-group = 'xyz.xy718'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+
 version = '0.0.1-SNAPSHOT'
 
-configurations {
-    // compileOnly {
-    //     extendsFrom annotationProcessor
-    // }
+repositories {
+    mavenCentral()
 }
-
+ext {
+	set('springCloudVersion', "Hoxton.SR6")
+}
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter'
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.cloud:spring-cloud-config-client'
-    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-config-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java','../XyCloud-model/src/main/java']
+        }
+    }
+}
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 test {

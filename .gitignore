@@ -13,6 +13,7 @@
 
 XyCloud-TestProducer/.settings/
 XyCloud-TestProducer/bin/
+XyCloud-TestProducer/build/
 
 XyCloud-config/.settings/
 XyCloud-config/build/
@@ -27,4 +28,5 @@ XyCloud-model/bin/
 
 XyCloud-Gateway/.settings
 XyCloud-Gateway/gradle/
+XyCloud-Gateway/build/
 XyCloud-Gateway/bin/

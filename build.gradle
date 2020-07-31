@@ -4,9 +4,6 @@ plugins {
     id 'java'
 }
 
-group 'xyz.xy718'
-version '1.0-SNAPSHOT'
-
 ext {
     set('springCloudVersion', "Hoxton.SR6")
 }
@@ -14,16 +11,16 @@ ext {
 dependencies {
 
 }
-allprojects{
+subprojects{
 	apply plugin: "java-library"
 	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
 	apply plugin: 'java'
 
+	group 'xyz.xy718'
+	version '1.0-SNAPSHOT'
 	sourceCompatibility = '1.8'
-    repositories {
-        mavenCentral()
-    }
+    
 	dependencies{
 	    compileOnly 'org.projectlombok:lombok'
 	    annotationProcessor 'org.projectlombok:lombok'
